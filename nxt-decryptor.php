@@ -81,10 +81,10 @@
 
 	// https://stackoverflow.com/questions/2124195/command-line-progress-bar-in-php
 	function progressBar($done, $total) {
-    	$perc = floor(($done / $total) * 100);
-    	$left = 100 - $perc;
-    	$write = sprintf("\033[0G\033[2K[%'={$perc}s>%-{$left}s] - $perc%%", "", "");
-    	fwrite(STDERR, $write);
+    		$perc = floor(($done / $total) * 100);
+    		$left = 100 - $perc;
+    		$write = sprintf("\033[0G\033[2K[%'={$perc}s>%-{$left}s] - $perc%%", "", "");
+    		fwrite(STDERR, $write);
 	}
 
 	function decryptPrivateKey($file, $password, $keyid) {
